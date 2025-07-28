@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hostel Admission Form</title>
+  <style>
+    body {
+      background-color: #96ceff;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      background-color: #ffffff;
+      width: 60%;
+      margin: auto;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .radio-group, .checkbox-group {
+      margin-top: 5px;
+    }
+    .form-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr>
+    <td bgcolor="white" align="left">
+      <img src="https://admissions.karunya.edu/campaign/admissions/img/xku-logo.png.pagespeed.ic.zXkAwwgLWH.png" alt="HealthifyMe Logo" width="200">
+    </td>
+    <td bgcolor="white" align="right">
+      <p>Secure. Comfortable. Hassle-Free Living.</p>
+    </td>
+  </tr>
+</table>
+
+<h1>Hostel Admission Form</h1>
+
+<form action="/serverlogic" method="post">
+  <fieldset>
+    <legend>Personal Details</legend>
+    
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required placeholder="Enter full name" maxlength="50" autofocus>
+    
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required placeholder="e.g. name@example.com">
+    
+    <label for="tel">Mobile Number</label>
+    <input type="tel" id="tel" name="tel" required placeholder="e.g. 9876543210" pattern="[0-9]{10}">
+    
+    <label for="pwd">Password</label>
+    <input type="password" id="pwd" name="pwd" required minlength="6" maxlength="20" placeholder="Enter password">
+  </fieldset>
+
+  <fieldset>
+    <legend>Hostel Preferences</legend>
+
+    <label>Gender</label>
+    <div class="radio-group">
+      <input type="radio" id="male" name="gender" value="male" required> Male
+      <input type="radio" id="female" name="gender" value="female" required> Female
+    </div>
+
+    <label>Facilities Required</label>
+    <div class="checkbox-group">
+      <input type="checkbox" id="wifi" name="wifi" value="yes"> Wi-Fi
+      <input type="checkbox" id="ac" name="ac" value="yes"> AC Room
+      <input type="checkbox" id="laundry" name="laundry" value="yes"> Laundry
+      <input type="checkbox" id="gym" name="gym" value="yes"> Gym
+    </div>
+
+    <label for="room">Room Type</label>
+    <select id="room" name="room" required>
+      <option value="">--Select--</option>
+      <option value="single">Single</option>
+      <option value="double">Double</option>
+      <option value="shared">Shared</option>
+      <option value="deluxe">Deluxe</option>
+      <option value="ac">AC Room</option>
+    </select>
+
+    <label for="checkin">Check-in Date</label>
+    <input type="date" id="checkin" name="checkin" required>
+
+    <label for="months">No. of Months Stay</label>
+    <input type="number" id="months" name="months" min="1" max="12" required placeholder="Enter number of months">
+  </fieldset>
+
+  <fieldset>
+    <legend>Other Info</legend>
+
+    <label for="website">College Website</label>
+    <input type="url" id="website" name="website" placeholder="https://example.edu">
+    
+    <label for="search">Search Hostel</label>
+    <input type="search" id="search" name="search" placeholder="e.g. Nearby Hostels">
+    
+    <label for="photo">Upload Photo</label>
+    <input type="file" id="photo" name="photo" required>
+    
+    <label for="note">Any Note</label>
+    <textarea id="note" name="note" rows="4" placeholder="Mention allergies or requests..."></textarea>
+  </fieldset>
+
+  <div class="form-buttons">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </div>
+</form>
+<br>
+<p style="text-align:center;">© 2025 Victor Paul. All rights reserved.</p>
+</body>
+</html>
